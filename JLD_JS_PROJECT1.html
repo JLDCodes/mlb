@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>JLD Project</title>
+   <link href="main.css" rel="stylesheet">
+  <script src="myScript.js"></script>  
+</head>
+<body onload="initialize();">
+    <body background="1078848-large-baseball-wallpaper-2048x1364-for-htc.jpg">
+    <wrap>
+    <h1>Major League Baseball Form</h1>
+    <section>
+   	<p>Year:
+	<select id="yearPulldown" onchange="">
+    </select></p>
+    <p>Month:
+	<select id="monthPulldown" onchange="">
+    </select></p>
+      <p>Day:
+	<select id="dayPulldown" onchange="">
+    </select></p>
+    <input type="button" id="btnSubmit" value="Retrieve" onclick="getBaseballDataAsynch();"/>
+    </section>
+    <br> <br/>
+    <br> <br/>
+    <br> <br/>
+    <br> <br/>
+    <br> <br/>
+    
+    <h3>Game Details:</h3>
+    <article>
+     <p>Home Team Name:
+    <input type="text" id="homeTeam" onkeypress="filterText(this);" maxlength="30" size="23" /></p>
+    <p>Away Team Name:
+    <input type="text" id="awayTeam" onkeypress="filterText(this);" maxlength="30" size="23" /></p>
+    <p>Winning Pitcher:
+    <input type="text" id="winPitch" onkeypress="filterText(this);" maxlength="30" size="23" /></p>
+    <p>Losing Pitcher:
+    <input type="text" id="losingPitch" onkeypress="filterText(this);" maxlength="30" size="23" /></p>
+     <p>Venue:
+    <input type="text" id="venue" onkeypress="filterText(this);" maxlength="7" size="23" /></p>
+    <input type="button" id="previousGame" value="Previous Game" onclick="previousGame();"/>
+     <input type="button" id="nextGame" value="Next Game" onclick="nextGame();"/>
+     <input type="button" id="fillDate" value="Save Changes" onclick="saveData();"/>
+    </article>
+         
+    </wrap>
+    
+</body>
+</html>
